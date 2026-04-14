@@ -7,20 +7,18 @@ class StudentList:
     def __init__(self):
         self.students = []
     def append(self, student):
-        self.append(student)
+        self.students.append(student)
         
     def get_average(self):
         return sum([
             student.score
-            for student in self.students:
-                sum += self.score
-                sum = sum / 2
-                ])
+            for student in self.students])/len(self.students)
         
     def get_first_by_score(self):
-        return
+        return max(self.students, key=lambda student: student.score)
+    
     def get_last_by_score(self):
-        return
+        return min(self.students, key=lambda student: student.score)
     
 students = StudentList()
 students.append(Student("구름", 100))
